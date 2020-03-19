@@ -1,5 +1,8 @@
 FROM continuumio/miniconda3
 WORKDIR /pywafo
+
+ENV PATH /opt/conda/bin:$PATH
+
 RUN conda update --yes conda
 RUN conda install --yes conda-build
 RUN apt-get update -y
